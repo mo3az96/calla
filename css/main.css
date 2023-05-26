@@ -1018,6 +1018,18 @@ html[dir=ltr] .offer-item li span {
   color: #797979;
   font-weight: 400;
 }
+html[dir=rtl] .custom-input::-moz-placeholder {
+  text-align: right;
+}
+html[dir=rtl] .custom-input::placeholder {
+  text-align: right;
+}
+html[dir=ltr] .custom-input::-moz-placeholder {
+  text-align: left;
+}
+html[dir=ltr] .custom-input::placeholder {
+  text-align: left;
+}
 .custom-input:focus {
   border-color: #FC86BE;
 }
@@ -1041,9 +1053,24 @@ textarea.custom-input {
   justify-content: center;
   transition: all 0.3s ease-in-out;
 }
+.submit-btn i {
+  color: #fff;
+  -webkit-margin-start: 10px;
+          margin-inline-start: 10px;
+  transition: all 0.3s ease-in-out;
+}
 .submit-btn:hover {
   color: #FC86BE;
   background-color: #fff;
+}
+.submit-btn:hover i {
+  color: #FC86BE;
+  transform: translateX(-10px);
+}
+.log-form .submit-btn {
+  width: 260px;
+  height: 59px;
+  margin: auto;
 }
 
 header {
@@ -1405,6 +1432,89 @@ header {
   .contact-sec {
     padding: 55px 0 35px;
   }
+}
+
+.page-body {
+  padding: 55px 0 30px;
+  position: relative;
+}
+.page-body .pattern {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+.page-body .pattern img {
+  width: 100%;
+}
+
+.page-content {
+  position: relative;
+  z-index: 2;
+}
+
+.page-title {
+  font-size: 32px;
+  color: #FC86BE;
+  font-weight: 800;
+  text-align: center;
+  line-height: 1.125;
+  margin: 0 0 36px;
+}
+
+.login-logo {
+  width: 161px;
+  margin: 0 auto 17px;
+}
+@media (max-width: 991px) {
+  .login-logo {
+    display: none;
+  }
+}
+
+.log-form {
+  width: 100%;
+  max-width: 444px;
+  margin: auto;
+}
+
+.forget {
+  width: -moz-max-content;
+  width: max-content;
+  display: flex;
+  color: #333743;
+  font-size: 16px;
+  text-decoration: none;
+  margin-bottom: 30px;
+  -webkit-margin-start: auto;
+          margin-inline-start: auto;
+  transition: all 0.3s ease-in-out;
+}
+.forget:hover {
+  color: #FC86BE;
+}
+
+.form-hint {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 16px;
+  color: #333743;
+  font-weight: 400;
+  margin: 18px 0 0;
+}
+.form-hint a {
+  color: #333743;
+  font-weight: 700;
+  text-decoration: none;
+  -webkit-margin-start: 3px;
+          margin-inline-start: 3px;
+  transition: all 0.3s ease-in-out;
+}
+.form-hint a:hover {
+  color: #FC86BE;
 }
 
 footer {
