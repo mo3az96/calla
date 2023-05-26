@@ -25,6 +25,7 @@ $(document).ready(function () {
     a11y: {
       enabled: false,
     },
+    
     navigation: {
       nextEl: ".services-slider .swiper-btn-next",
       prevEl: ".services-slider .swiper-btn-prev",

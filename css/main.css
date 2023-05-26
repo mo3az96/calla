@@ -63,6 +63,11 @@ img {
   -ms-interpolation-mode: nearest-neighbor;
 }
 
+html[dir=ltr] .la-arrow-left::before {
+  display: inline-flex;
+  transform: scaleX(-1);
+}
+
 @font-face {
   font-family: "Almarai";
   src: url("../fonts/Almarai/Almarai-Light.woff2") format("woff2"), url("../fonts/Almarai/Almarai-Light.woff") format("woff"), url("../fonts/Almarai/Almarai-Light.ttf") format("truetype");
@@ -237,8 +242,11 @@ main .pattern img {
 .main-btn:hover {
   color: #fff;
 }
-.main-btn:hover i {
+html[dir=rtl] .main-btn:hover i {
   transform: translateX(-10px);
+}
+html[dir=ltr] .main-btn:hover i {
+  transform: translateX(10px);
 }
 .main-btn.mobile-main-btn {
   display: none;
@@ -415,8 +423,11 @@ main .pattern img {
 .about-btn:hover {
   color: #fff;
 }
-.about-btn:hover i {
+html[dir=rtl] .about-btn:hover i {
   transform: translateX(-10px);
+}
+html[dir=ltr] .about-btn:hover i {
+  transform: translateX(10px);
 }
 @media (max-width: 991px) {
   .about-btn {
@@ -799,6 +810,9 @@ html[dir=ltr] .package-item .old-price {
   color: #78797d;
   font-size: 22px;
 }
+html[dir=ltr] .offer-item li {
+  font-size: 18px;
+}
 .offer-item li ~ li {
   margin-top: 10px;
 }
@@ -819,6 +833,7 @@ html[dir=rtl] .offer-item li span {
 }
 html[dir=ltr] .offer-item li span {
   margin-left: auto;
+  font-size: 20px;
 }
 .offer-item li small {
   font-size: 100%;
@@ -954,6 +969,9 @@ html[dir=ltr] .offer-item li span {
   inset-inline-start: 0;
   z-index: 1;
 }
+html[dir=ltr] .contact-sec .pattern img {
+  transform: scaleX(-1);
+}
 
 .contact-cont {
   position: relative;
@@ -1065,7 +1083,12 @@ textarea.custom-input {
 }
 .submit-btn:hover i {
   color: #FC86BE;
+}
+html[dir=rtl] .submit-btn:hover i {
   transform: translateX(-10px);
+}
+html[dir=ltr] .submit-btn:hover i {
+  transform: translateX(10px);
 }
 .log-form .submit-btn {
   width: 260px;
@@ -1101,10 +1124,15 @@ header {
   bottom: 0;
   background-color: #fff;
   inset-inline-start: 195px;
-  transform: translateX(100%);
   border-end-end-radius: 134px;
   width: 100vw;
   z-index: 1;
+}
+html[dir=rtl] .header:after {
+  transform: translateX(100%);
+}
+html[dir=ltr] .header:after {
+  transform: translateX(-100%);
 }
 @media (max-width: 1199px) {
   .header:after {
@@ -1358,6 +1386,9 @@ header {
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
+html[dir=ltr] .swiper-btns .swiper-btn {
+  transform: scaleX(-1);
+}
 .swiper-btns .swiper-btn:hover {
   stroke: #FC86BE;
 }
@@ -1386,6 +1417,9 @@ header {
   top: -41px;
   inset-inline-end: 0;
   z-index: 1;
+}
+html[dir=ltr] .services-sec .pattern img {
+  transform: scaleX(-1);
 }
 @media (max-width: 991px) {
   .services-sec {
@@ -1600,6 +1634,9 @@ footer .pattern {
   top: 0;
   inset-inline-start: 0;
   z-index: 1;
+}
+html[dir=ltr] footer .pattern img {
+  transform: scaleX(-1);
 }
 @media (max-width: 991px) {
   footer {
